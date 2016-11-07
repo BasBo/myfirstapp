@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I'm Sebastian and I'm currently learning how to develope dynamic web applications by using Rails.
 
 Things you may want to cover:
 
