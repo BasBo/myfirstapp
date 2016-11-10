@@ -1,3 +1,60 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//=====Navigation Styles=========
+html {
+	height: 150%;
+}
+
+#navbar{
+	background-color: #333;
+	font-size: 1.5em;
+}
+
+ul {
+	margin: 10px 0 10px 0;
+}
+
+#navlinks {
+	padding-top: 30px;
+	color: white;
+}
+
+#navlinks:hover,
+#navlinks:focus {
+	color:red;
+}
+
+.brand-image {
+	float: left;
+	border-radius: 100%;
+	padding: 5px 0 5px 0;
+}
+
+//=====Other-Sytles=========
+
+h1 {
+	margin-top: 2.5em;
+}
+
+//=====Footer-Styles=========
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 5px 10px 5px;
+	background-color: #333;
+	color: white;
+	text-align: right;
+}
+
+.fb_iframe_widget {
+	float: left;
+}
+
+
+.copyright {
+	display: inline-block;
+	float: right;
+}
