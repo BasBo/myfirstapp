@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
   def show
   end
 
+
   # GET /products/new
   def new
     @product = Product.new
@@ -59,6 +60,10 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  #For test use
+  def hello
   end
 
   private
