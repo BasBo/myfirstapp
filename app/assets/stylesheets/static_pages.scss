@@ -8,6 +8,23 @@
 	width: 100%;
 }
 
+.image-carousel {
+	margin: auto;
+}
+
+.carousel-indicators .active {
+	border: 1px solid #555;
+	background-color: #555;
+}
+
+.carousel-indicators li {
+	border: 1px solid #555;
+}
+
+.carousel-caption {
+	color: #555;
+}
+
 @media (min-width: 1200px){
 	h1 {
 		font-size: 66px;
