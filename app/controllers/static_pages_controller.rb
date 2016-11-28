@@ -5,6 +5,6 @@ class StaticPagesController < ApplicationController
   def landing_page
   	@products = Product.limit(5)
   	@featured_product = Product.first
-  	@seeded_product = Product.find(15).name
+  	@seeded_product = Product.find(12).name
   end
 end
