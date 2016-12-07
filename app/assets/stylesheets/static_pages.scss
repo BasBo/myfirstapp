@@ -8,13 +8,27 @@
 	padding: 20px 10px;
 }
 
+.header-text {
+	display: block;
+	text-align: center;
+}
+
+.logo-img {
+	width: 25%;
+}
+
+.leerspalten {
+	display: none;
+}
+
 h1 {
+	font-size: 28px;
 	margin-top: 0px;
 	color: #333;
 }
 
-.header-logo {
-
+h2 {
+	display:none;
 }
 
 .logo-img {
@@ -61,6 +75,11 @@ ul {
 
 //=====Main-Sytles=========
 
+.position-maintext {
+	padding: 178px 0 0 0;
+	margin-top: 0;
+}
+
 .main-image {
 	display: block;
 	margin: auto;
@@ -77,6 +96,10 @@ ul {
 
 .carousel-indicators li {
 	border: 1px solid #555;
+}
+
+.carousel-control {
+	top: 50%;
 }
 
 .carousel-caption {
@@ -104,37 +127,7 @@ ul {
 	float: right;
 }
 
-//=======Media queries=========
-
-	h1 {
-		font-size: 28px
-	}
-
-	h2 {
-		display:none;
-	}
-
-	.position-maintext {
-		padding: 178px 0 0 0;
-		margin-top: 0;
-	}
-
-	.header-text {
-		display: block;
-		text-align: center;
-	}
-
-	.header-logo {
-	}
-
-	.logo-img {
-		width: 25%;
-	}
-
-	.leerspalten {
-		display: none;
-	}
-
+//=======Media queries=======
 
 @media (min-width: 576px){
 	h1 {
@@ -145,13 +138,10 @@ ul {
 		display: block;
 		font-size: 16px;
 	}
-	.position-maintext {
-		padding: 178px 0 0 0;
-		margin-top: 0;
-	}
 
 	.leerspalten {
-		float:left;
+		float: left;
+		display: block;
 		width: 0%;
 	}
 
@@ -170,10 +160,6 @@ ul {
 		width: 100%;
 	}
 
-	.leerspalten {
-		display: block;
-	}
-
 	.clearfix {
 		clear: both;
 	}	
@@ -189,27 +175,18 @@ ul {
 	}
 	.position-maintext {
 		padding: 200px 0 0 0;
-		margin-top: 0;
 	}
 
 	.leerspalten {
-		float:left;
 		width: 16.67%;
 	}
 
 	.header-text {
-		float:left;
 		width: 66.67%;
-		text-align: center;
 	}
 
 	.header-logo {
-		float:left;
 		width: 16.66%;
-	}
-
-	.clearfix {
-		clear: both;
 	}
 }
 
@@ -222,29 +199,16 @@ ul {
 		font-size: 24px;
 	}
 
-	.position-maintext {
-		padding: 200px 0 0 0;
-		margin-top: 0;
-	}
-
 	.leerspalten {
-		float:left;
 		width: 16.67%;
 	}
 
 	.header-text {
-		float:left;
 		width: 66.67%;
-		text-align: center;
 	}
 
 	.header-logo {
 		float:right;
-		width: 16.66%;
-	}
-
-	.clearfix {
-		clear: both;
 	}
 }
 
@@ -259,27 +223,14 @@ ul {
 
 	.position-maintext {
 		padding: 240px 0 0 0;
-		margin-top: 0;
 	}
 
 	.leerspalten {
-		float: left;
 		width: 16.67%;
 	}
 
 	.header-text {
-		float: left;
 		width: 66.67%;
-		text-align: center;
-	}
-
-	.header-logo {
-		float: right;
-		width: 16.66%;
-	}
-
-	.clearfix {
-		clear: both;
 	}
 }
 
