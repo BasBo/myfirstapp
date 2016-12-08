@@ -3,5 +3,69 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .padding {
-	padding-top: 272px;
+	padding-top: 175px;
+}
+
+.headline_products {
+	display: block;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 20px;
+}
+
+.biketraces {
+	width: 100%;
+	margin-top: 10px;
+} 
+
+@media (min-width: 405px){
+	.padding {
+		padding-top: 187px;
+	}
+}
+
+@media (min-width: 460px){
+	.padding {
+		padding-top: 200px;
+	}
+}
+
+@media (min-width: 540px){
+	.padding {
+		padding-top: 215px;
+	}
+}
+
+@media (min-width:576px){
+	.padding {
+		padding-top: 170px;
+	}
+}
+
+@media (min-width: 768px){
+	.padding {
+		padding-top: 197px;
+	}
+}
+
+
+@media (min-width: 992px){
+	.padding {
+		padding-top: 230px;
+	}
+	p {
+		font-size: 12px;
+	}
+}
+
+@media (min-width: 1200px){
+	.padding {
+		padding-top: 245px;
+	}
+}
+
+@media (min-width: 1390px){
+	.padding {
+		padding-top: 260px;
+	}
 }
