@@ -106,6 +106,11 @@ ul {
 	color: #555;
 }
 
+#maintext_headline {
+	padding-top: 188px;
+}
+
+
 //=====Footer-Styles=========
 
 .footer {
@@ -188,6 +193,10 @@ ul {
 	.header-logo {
 		width: 16.66%;
 	}
+
+	#maintext_headline {
+		padding-top: 210px; 
+	}
 }
 
 @media (min-width: 992px){
@@ -210,6 +219,10 @@ ul {
 	.header-logo {
 		float:right;
 	}
+
+	#maintext_headline {
+		padding-top: 230px; 
+	}	
 }
 
 @media (min-width: 1200px){
@@ -231,6 +244,16 @@ ul {
 
 	.header-text {
 		width: 66.67%;
+	}
+
+	#contact_headline {
+		padding-top: 240px; 
+	}
+}
+
+@media (min-width: 1500px){
+	#maintext_headline {
+		padding-top: 270px; 
 	}
 }
 
