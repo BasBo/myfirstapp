@@ -38,7 +38,7 @@ h2 {
 
 //=====Navigation Styles=========
 html {
-	height: 150%;
+	height: 200%;
 }
 
 .header-navigation {
@@ -65,6 +65,15 @@ ul {
 #navlinks:hover,
 #navlinks:focus {
 	color:red;
+}
+
+.search-form-margin {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+label {
+	font-weight: normal;
 }
 
 .brand-image {

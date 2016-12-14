@@ -49,12 +49,21 @@
 
 	  	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	  		<ul class="nav navbar-nav">
-	  		  <li><%= link_to "Home", root_path, {id: "navlinks"} %></li>
-	  		  <li><%= link_to "About", static_pages_about_path, {id: "navlinks"} %></li>
-	  		  <li><%= link_to "Contact", static_pages_contact_path, {id:"navlinks"} %></li>
-	  		  <li><%= link_to "Shop", products_path, {id: "navlinks"} %> </li>
-	  		</ul> 
-			</div>
+	  			<li><%= link_to "Home", root_path, {id: "navlinks"} %></li>
+	  		  	<li><%= link_to "About", static_pages_about_path, {id: "navlinks"} %></li>
+	  		  	<li><%= link_to "Contact", static_pages_contact_path, {id:"navlinks"} %></li>
+	  		  	<li><%= link_to "Shop", products_path, {id: "navlinks"} %> </li>
+	  		</ul>
+	  		<ul class="navbar-right search-form-margin">
+	  		  	<li> 
+	  		  		<%= form_tag("/products", method: "get", class: "navbar-form search-form-margin") do %> 
+						<%= label_tag(:q,"Search for:", id: "navlinks") %>
+						<%= text_field_tag (:q) %>
+						<%= submit_tag("Search", class: "btn btn-default") %>
+					<% end %>
+			  	</li>
+			</ul>
+		</div>
 		</nav>
 	</div> <!--End .header-navigation-->
 
