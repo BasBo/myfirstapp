@@ -1,12 +1,24 @@
-<h1 id="maintext_headline">Contact</h1>
-<h3>You find us:</h3>
-<ul>
-	<li>Dogscooters</li>
-	<li>Scooteravenue</li>
-	<li>Buer</li>
-</ul>
-<h3>Questions or suggestions? Call or leave us a message: </h3>
-<ul>
-	<li>Phone: 2123584</li>
-	<li>E-mail: dogscootersbuer@gmail.com</li>
-</ul>
+<h1 class="contact-title">Contact Us</h1>
+
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= label_tag :name %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+    </div>      
+    <div class="form-group">
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :message %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+    </div>      
+  </div>
+</div>
+<%= submit_tag "Send" %>   
+<% end %>
+
