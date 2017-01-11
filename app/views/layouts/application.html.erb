@@ -54,6 +54,15 @@
 	  		  	<li><%= link_to "Contact", static_pages_contact_path, {id:"navlinks"} %></li>
 	  		  	<li><%= link_to "Shop", products_path, {id: "navlinks"} %> </li>
 	  		</ul>
+	  		<ul class="nav pull-right">
+	  			<li>
+	  			<% if user_signed_in? %>
+	  				<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+	  			<% else %>
+	  				<%= link_to('Login', new_user_session_path) %>
+	  			<% end %>
+	  			</li>
+	  		</ul>
 	  		<ul class="navbar-right search-form-margin">
 	  		  	<li> 
 	  		  		<%= form_tag("/products", method: "get", class: "navbar-form search-form-margin") do %> 
@@ -67,11 +76,18 @@
 		</nav>
 	</div> <!--End .header-navigation-->
 
+
 <!--==============Main==============-->
 
 
 
 <%= yield %>
+
+<!--===========Flash-messages=======-->
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
 <!--==============Footer==============-->
  	<footer class="footer">
  		<div class="fb-like" data-href="http://localhost:3000/static_pages/index" data-width="25" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>

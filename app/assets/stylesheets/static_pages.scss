@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 //=====Header Styles=========
 .header {
 	background-color: #eee;
@@ -42,6 +44,7 @@ html {
 }
 
 .header-navigation {
+	top: 0;
 	position: fixed;
 	z-index: 1000;
 	width: 100%;

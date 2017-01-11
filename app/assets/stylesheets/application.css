@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+/* Registrations/new (Sign-up view) and /edit (Change-password view), Sessions/new*/
+
+.form-devise {
+  padding-top: 300px;
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+.notice,
+.alarm {
+	display: inline-block;
+	float: right;
+	color: red;
+
+}
+
+
+
+
