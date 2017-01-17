@@ -3,17 +3,23 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <%= image_tag(@product.image_url, class: "img-responsive") %> 
+      <%= image_tag(@product.image_url, class: "img-responsive thumbnail") %> 
     </div>  
     <div class="col-md-6">
         <h2><%= @product.name %></h2><br>
-        
         <strong>Colour: </strong>
         <%= @product.colour %><br>
     </div>
+    <div class="col-md-3 thumbnail">
+
+      <h3>Place for comments</h3>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctu a. At vero eos  </p>
+
+    </div>
+
     <div class="col-md-6 price-position">
         <strong>Price: </strong>
-        <strong class="price"><%= @product.price %>$</strong><br>
+        <strong class="price"><%= @product.price %><span class="glyphicon glyphicon-usd" aria-hidden="true"></span></strong><br>
     </div>
   </div>
 
