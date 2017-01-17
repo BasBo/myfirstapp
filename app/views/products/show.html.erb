@@ -1,29 +1,28 @@
 <p id="notice" class="padding"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <%= image_tag(@product.image_url, class: "img-responsive") %> 
+    </div>  
+    <div class="col-md-6">
+        <h2><%= @product.name %></h2><br>
+        
+        <strong>Colour: </strong>
+        <%= @product.colour %><br>
+    </div>
+    <div class="col-md-6 price-position">
+        <strong>Price: </strong>
+        <strong class="price"><%= @product.price %>$</strong><br>
+    </div>
+  </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <div class="row">
+      <div class="col-md-12"><%= @product.description %>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </div>
+  </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-	<strong>Colour: </strong>
-	<%= @product.colour %>
-<p>
-
-<p>
-	<strong>Price: </strong>
-	<%= @product.price %>
-<p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Back', products_path %>
+</div>
