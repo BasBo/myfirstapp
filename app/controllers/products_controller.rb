@@ -25,7 +25,8 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     product_id = params[:id]
-    @product = Product.find(product_id)  
+    @product = Product.find(product_id)
+    @comments = @product.comments.order("created_at DESC")  
   end
 
 
