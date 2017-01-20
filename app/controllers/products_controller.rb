@@ -26,7 +26,8 @@ class ProductsController < ApplicationController
   def show
     product_id = params[:id]
     @product = Product.find(product_id)
-    @comments = @product.comments.order("created_at DESC")  
+  #@comments = @product.comments.order("created_at DESC")  
+    @comments = @product.comments.paginate(:page => params[:page], :per_page => 2)
   end
 
 
