@@ -16,6 +16,10 @@ class CommentsController < ApplicationController
 	end
 
 	def destroy
+		@comment = Comment.find(params[:id]) #Ruft den gewünschten Kommentar auf und speichert ihn als Instanzvariable
+		product = @comment.product 
+		@comment.destroy
+		redirect_to product
 	end
 
 	#private
