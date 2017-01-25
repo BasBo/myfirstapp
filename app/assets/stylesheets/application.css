@@ -16,6 +16,10 @@
 
 /* Registrations/new (Sign-up view) and /edit (Change-password view), Sessions/new*/
 
+.position-content {
+	padding-top: 205px;
+}
+
 .form-devise {
   padding-top: 300px;
   max-width: 330px;
@@ -30,6 +34,38 @@
 
 }
 
+/* =========Media-Queries============*/
+@media (min-width: 460px){
+	.position-content {
+		padding-top: 225px;
+	}
+}
 
+@media (min-width: 576px){
+	.position-content {
+		padding-top: 185px ;
+	}
+}
+
+@media (min-width: 768px){
+	.position-content {
+		padding-top: 205px;
+	}
+}
+
+@media (min-width: 992px){
+	.position-content {
+		padding-top: 230px;
+	}
+
+}
+
+@media (min-width: 1200px){
+
+	.position-content {
+		padding-top: 265px;
+	}
+
+}
 
 

@@ -73,6 +73,7 @@ ul {
 .search-form-margin {
 	margin-top: 0px;
 	margin-bottom: 0px;
+	padding-left: 0px;
 }
 
 label {
@@ -88,7 +89,7 @@ label {
 //=====Main-Sytles=========
 
 .position-maintext {
-	padding: 178px 0 0 0;
+	//padding: 178px 0 0 0;
 	margin-top: 0;
 }
 
@@ -119,7 +120,7 @@ label {
 }
 
 #maintext_headline {
-	padding-top: 188px;
+	//padding-top: 188px;
 }
 
 
@@ -191,7 +192,7 @@ label {
 		font-size: 18px
 	}
 	.position-maintext {
-		padding: 200px 0 0 0;
+		//padding: 200px 0 0 0;
 	}
 
 	.leerspalten {
@@ -207,7 +208,7 @@ label {
 	}
 
 	#maintext_headline {
-		padding-top: 210px; 
+		//padding-top: 210px; 
 	}
 }
 
@@ -233,7 +234,7 @@ label {
 	}
 
 	#maintext_headline {
-		padding-top: 230px; 
+		//padding-top: 230px; 
 	}	
 }
 
@@ -247,7 +248,7 @@ label {
 	}
 
 	.position-maintext {
-		padding: 240px 0 0 0;
+		//padding: 240px 0 0 0;
 	}
 
 	.leerspalten {
@@ -259,17 +260,17 @@ label {
 	}
 
 	.contact-title {
-		padding-top: 280px; 
+		//padding-top: 280px; 
 	}
 
 	.thankyou-title {
-		padding-top: 280px;
+		//padding-top: 280px;
 	}
 }
 
 @media (min-width: 1500px){
 	#maintext_headline {
-		padding-top: 270px; 
+		//padding-top: 270px; 
 	}
 }
 

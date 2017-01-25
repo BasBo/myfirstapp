@@ -30,7 +30,6 @@ class ProductsController < ApplicationController
     @comments = @product.comments.paginate(:page => params[:page], :per_page => 2)
   end
 
-
   # GET /products/new
   def new
     @product = Product.new
@@ -80,11 +79,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  #For test use
-  def hello
-  end
-
-  private
+  #private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
