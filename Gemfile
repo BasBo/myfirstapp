@@ -39,6 +39,9 @@ group :development, :test do
   #gem 'byebug'
   # Adds the RSpec Testing Framework to Rails
   gem 'rspec-rails', '~> 3.5'
+
+  gem "factory_girl_rails", "~> 4.0"
+
 end
 
 group :development do
@@ -62,3 +65,5 @@ gem 'cancancan'
 gem 'will_paginate'
 
 gem 'rails-controller-testing'
+
+
