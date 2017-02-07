@@ -1,37 +1,33 @@
 require 'rails_helper'
-
 describe UsersController, :type => :controller do
 
-  #let(:user) { User.create!(email: 'peter@example.com', password: '1234567890') }
-  @user = FactoryGirl.create(:user)
+let (:user) {FactoryGirl.create(:user, :first)}
+let (:second_user) {FactoryGirl.create(:user, :second)}
 
-  let(:user_two) { User.create!(email: 'john@example.com', password: '000000') }
+ describe "GET #show" do
 
-  describe 'GET #show' do
-     context 'User is logged in' do
-      before do
-        puts FactoryGirl.create(:user)
-     	end
-
-     	it 'loads correct user details' do
-     		get :show, id: @user.id
-     		expect(response).to have_http_status(200)
-     		expect(assigns(:@user)).to eq @user
-     	end
-
-      it 'can not access show page of another user' do
-        get :show, id: @user.id
-        expect(assigns(:@user)).not_to eq user_two
-      end  
-
+   context 'user is logged in' do
+     before 'login user' do
+       sign_in user
+     end
+     it 'loads correct user details' do
+       get :show, params: {id: user.id}
+       expect(response).to be_success
+       expect(response).to have_http_status(200)
+       expect(assigns(:user)).to eq user
      end
 
-     context 'No user is logged in' do
-       it 'redirects to login' do
-         get :show, id: @user.id
-         expect(response).to redirect_to(root_path)
-       end
+     it 'can not access show page of another user' do
+       get :show, id: second_user.id
+       expect(assigns(:user)).not_to eq second_user
      end
-  end
+   end
 
+   context "no user is logged in" do
+     it 'redirects to login' do
+       get :show, id: user.id
+       expect(response).to redirect_to(root_path)
+     end
+   end
+ end
 end
