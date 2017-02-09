@@ -26,7 +26,7 @@ let (:second_user) {FactoryGirl.create(:user, :second)}
    context "no user is logged in" do
      it 'redirects to login' do
        get :show, id: user.id
-       expect(response).to redirect_to(root_path)
+       expect(response).to redirect_to(new_user_session_path)
      end
    end
  end
