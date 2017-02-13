@@ -15,9 +15,15 @@
       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
     </div>
 
+    <div class="col-md-6">
+      <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+    </div>
+
     <div class="col-md-6 price-position">
         <strong>Price: </strong>
-        <strong class="price"><%= @product.price %><span class="glyphicon glyphicon-usd" aria-hidden="true"></span></strong><br>
+        <strong class="price"><%= number_to_currency((@product.price)/100) %></strong><br>
     </div>
   </div>
 

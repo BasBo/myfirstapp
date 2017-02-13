@@ -66,4 +66,6 @@ gem 'will_paginate'
 
 gem 'rails-controller-testing'
 
+gem 'stripe'
+
 

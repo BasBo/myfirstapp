@@ -3,6 +3,6 @@
   <h3><%= product.name %></h3>
   <p><%= product.description %></p>
   <p><%= product.colour %></p>
-  <strong><%= product.price %> €</strong>
+  <strong><%= number_to_currency((product.price)/100) %></strong>
   <p><%= image_tag("biketraces.jpg", class: "img_responsive biketraces") %></p>
 </div>
