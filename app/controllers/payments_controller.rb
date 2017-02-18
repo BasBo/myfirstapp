@@ -1,4 +1,7 @@
 class PaymentsController < ApplicationController
+
+	before_action :authenticate_user!
+
 	def create
 	  @product = Product.find(params[:product_id])
 	  @user = current_user
@@ -9,11 +12,12 @@ class PaymentsController < ApplicationController
 	      :amount => @product.price, # amount in cents, again
 	      :currency => "usd",
 	      :source => token,
-	      :description => params[:stripeEmail]
+	      :description => params[:stripeEmail],
+	      :receipt_email => @user.email
 	    )
 
 	    if charge.paid
-	    	Order.create(:product_id => params[:product_id], :user_id => params[:user_id], :total => params[:amount])
+	    	Order.create(:product_id => params[:product_id], :user_id => @user.id, :total => @product.price)
 	    end
 
 	  rescue Stripe::CardError => e
