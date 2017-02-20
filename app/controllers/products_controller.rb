@@ -24,8 +24,11 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    #byebug #breakpoint of byebug gem, NOTICE that everything following that command will be placed on hold!
     product_id = params[:id]
+    logger.debug "Product-ID #{product_id} transmitted via http-request"
     @product = Product.find(product_id)
+    logger.debug "Product wiht ID #{product_id} queried from database"
   #@comments = @product.comments.order("created_at DESC")  
     @comments = @product.comments.paginate(:page => params[:page], :per_page => 2)
   end
@@ -60,6 +63,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
+        logger.debug "Product updated"
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
