@@ -18,4 +18,10 @@ $(document).on('turbolinks:load ajaxSuccess', function() {
        return $(this).attr('data-score');
      }
    });
+   $('.img-zoom').elevateZoom({
+      responsive: true,
+      tint:true, 
+      tintColour:'#333', 
+      tintOpacity:0.5
+   });
 });

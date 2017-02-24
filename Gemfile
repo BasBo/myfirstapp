@@ -70,6 +70,8 @@ gem 'stripe'
 
 gem 'brakeman'
 
+gem 'elevatezoom-rails'
+
 
 
 
