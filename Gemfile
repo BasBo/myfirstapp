@@ -72,6 +72,8 @@ gem 'brakeman'
 
 gem 'elevatezoom-rails'
 
+gem 'dalli'
+
 
 
 

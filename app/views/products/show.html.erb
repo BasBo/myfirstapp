@@ -52,4 +52,10 @@
 
         <%= link_to 'Edit', edit_product_path(@product) %> |
         <%= link_to 'Back', products_path %>
+
+  <% cache @product do %>
+    <h2><%= @product.name %></h2>
+    <p><%= @product.description %></p>
+  <% end %>
+
 </div>
