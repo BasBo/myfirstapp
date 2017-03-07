@@ -1,4 +1,4 @@
-<% cache product do %>
+<%# cache product do %>
 	<div class="col-sm-6 col-md-4">
   		<%= link_to image_tag(product.image_url,class: "img-responsive"), product_path(product) %>
   		<h3><%= product.name %></h3>
@@ -8,5 +8,5 @@
   		<strong><%= number_to_currency((product.price)/100) %></strong>
   		<p><%= image_tag("biketraces.jpg", class: "img_responsive biketraces") %></p>
 	</div>
-<% end %>
+<%# end %>
 
