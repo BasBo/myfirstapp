@@ -43,4 +43,7 @@ Rails.application.configure do
 
   #config.cache_store = :redis_store, "redis://localhost:6379"
   config.action_controller.perform_caching = true
+
+  #For Rails to generate plain JavaScript files instead of CoffeeScript files in context of ActionCable
+  config.app_generators.javascript_engine = :javascript
 end
