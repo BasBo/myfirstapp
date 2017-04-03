@@ -1,24 +1,30 @@
-<h1 class="contact-title">Contact Us</h1>
-
-<%= flash[:notice] %>
-
-<%= form_tag("/static_pages/thank_you") do %>
-<div class="row">
-  <div class="col-md-4">
-    <div class="form-group">
-      <%= label_tag :name %>
-      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", required: true %>
-    </div>      
-    <div class="form-group">
-      <%= label_tag :email, "Email Address" %>
-      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", required: true %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <h1 class="contact-title position-headline">Contact Us</h1>
     </div>
-    <div class="form-group">
-      <%= label_tag :message %>
-      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", required: true %>
-    </div>      
   </div>
-</div>
-<%= submit_tag "Send" %>   
-<% end %>
 
+  <%= flash[:notice] %>
+
+  <%= form_tag("/static_pages/thank_you") do %>
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <div class="form-group">
+        <%= label_tag :name %>
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", required: true %>
+      </div>      
+      <div class="form-group">
+        <%= label_tag :email, "Email Address" %>
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", required: true %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :message %>
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", required: true %>
+      </div> 
+        <%= submit_tag "Send" %>       
+    </div>
+  </div> 
+  <% end %>
+
+</div>
