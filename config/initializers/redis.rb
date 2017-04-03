@@ -1,2 +1,2 @@
 $redis = Redis.new(:host => 'localhost', :port => 6379)
-$redis = Redis.new(url: ENV["REDIS_URL"])
+$redis = Redis.new(:url => "redis://h:pe26eb0c86261bf76cdaa8371e1f72eed0363887b28fad59a6368bddb43b4ace6@ec2-34-206-56-30.compute-1.amazonaws.com:34859")
