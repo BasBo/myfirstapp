@@ -53,7 +53,8 @@
     <%= will_paginate @comments %>
   </div>
 
-        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Edit |', edit_product_path(@product) if user_signed_in? && @user.admin %> 
+        <%= link_to 'Destroy |', product_path(@product), :data => {:confirm => "Are you sure?"}, :method => :delete if user_signed_in? && @user.admin %> 
         <%= link_to 'Back', products_path %>
 
   <% #cache @product do %>

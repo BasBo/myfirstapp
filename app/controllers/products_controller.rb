@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_user, only: [:index, :show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :edit, :update, :destroy]
   # GET /products
   # GET /products.json
   def index
@@ -93,4 +95,15 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :colour, :price)
     end
+
+    def set_user
+      @user = current_user
+    end
+
+    def authenticate_admin!
+      unless current_user.admin 
+        redirect_to products_path
+      end
+    end
+
 end
