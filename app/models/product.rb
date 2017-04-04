@@ -14,6 +14,7 @@ class Product < ActiveRecord::Base
 	  comments.average(:rating).to_f
 	end
 
-	validates :name, presence: true #Validation of user-entries in forms
-
+	validates :name, :description, :colour, :image_url, :price,  :presence => true #Validation of user-entries in forms
+	validates :image_url, :format => /.jpg/
+	validates :price, :numericality => { :greater_than => 0}
 end
