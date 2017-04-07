@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
     else
       if params[:q]
         search_term = params[:q]
-        @products = Product.where("name ILIKE ?", "%#{search_term}%")
+        @products = Product.where('lower(search_term) = ?', search_term.downcase).first
       else
         @products = Product.all
       end
