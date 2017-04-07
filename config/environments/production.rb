@@ -80,7 +80,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'heroku'}
 
   # Configuration of cache_store
-  beginnconfig.cache_store = :dalli_store,
+  config.cache_store = :dalli_store,
                       (ENV["MEMCACHIER_SERVERS"] || "").split(","),
                       {:username => ENV["MEMCACHIER_USERNAME"],
                        :password => ENV["MEMCACHIER_PASSWORD"],
