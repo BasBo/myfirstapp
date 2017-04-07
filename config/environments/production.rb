@@ -55,7 +55,7 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production.
-   config.cache_store = :dalli_store
+   config.cache_store = :redis_store if ENV['REDIS_URL']
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
@@ -80,7 +80,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'heroku'}
 
   # Configuration of cache_store
-  config.cache_store = :dalli_store,
+  beginnconfig.cache_store = :dalli_store,
                       (ENV["MEMCACHIER_SERVERS"] || "").split(","),
                       {:username => ENV["MEMCACHIER_USERNAME"],
                        :password => ENV["MEMCACHIER_PASSWORD"],
@@ -88,7 +88,7 @@ Rails.application.configure do
                        :socket_timeout => 1.5,
                        :socket_failure_delay => 0.2,
                        :down_retry_delay => 60
-                      }
+                      } 
   config.web_socket_server_url = "wss://scooterbuer.herokuapp.com/cable"
   config.action_cable.allowed_request_origins = ['https://scooterbuer.herokuapp.com', 'http://scooterbuer.herokuapp.com']
 end
