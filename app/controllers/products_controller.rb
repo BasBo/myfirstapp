@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
     else
       if params[:q]
         search_term = params[:q]
-        @products = Product.find(:all, :conditions => ['name ILIKE ?', "%#{search}%"])
+        @products = Product.where("name ILIKE ?", "%#{search_term}%")
       else
         @products = Product.all
       end
